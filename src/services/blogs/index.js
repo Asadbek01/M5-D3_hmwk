@@ -4,14 +4,14 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import uniqid from "uniqid";
 import createHttpError from "http-errors";
-import { blogsValidation } from "./validation.js.js.js.js.js";
+import { blogsValidation } from "./validation.js";
 import { validationResult } from "express-validator";
 
 const blogPostRouter = express.Router();
 
 const blogsJSONPath = join(
   dirname(fileURLToPath(import.meta.url)),
-  "posts.json"
+  "blog.json"
 );
 console.log(blogsJSONPath);
 const getBlogs = () => JSON.parse(fs.readFileSync(blogsJSONPath));

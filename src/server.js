@@ -1,11 +1,11 @@
 import express from 'express'
 import listEndpoints from 'express-list-endpoints'
-import blogPostRouter from './apis/blogs/index.js'
+import blogPostRouter from './services/blogs/index.js'
 import cors from 'cors'
-import { badRequestHandler, unAuthorizedRequestHandler, notFoundHandler, genericErrorHandler } from './errorHandler.js'
+import { badRequestHandler, unAuthorizedRequestHandler, notFoundHandler, genericErrorHandler } from '../errorHandler.js'
 
 const server = express();
-const port = 3002
+const port = 3008
 
 server.use(cors())
 server.use(express.json())
